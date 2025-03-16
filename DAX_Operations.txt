@@ -1,0 +1,19 @@
+# Query for Order Day
+
+Order day = WEEKDAY(Customers[Order Date], 2)
+
+# Query For Order Category
+
+Order category = IF(Orders[Quantity] < 30, "Small Order", "Big Order")
+
+# Query For Profit Cost
+
+Profit Cost = SUM(Orders[Selling Price]) - SUM(Orders[Product Cost])
+
+# Query for sume of Orders
+
+Sum of Orders = SUM(Orders[Quantity])
+
+# Query for Total Profit
+
+Total Profit = (SUM(Orders[Selling Price]) - SUM(Orders[Product Cost])) * SUM(Orders[Quantity])
